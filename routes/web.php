@@ -20,7 +20,7 @@ use App\Models\Listing;
 
 Route::get('/', function () {
     return view('listings', [
-        'nameOfRes' => 'RESULT HERE DISPlayEd',
+        'nameOfRes' => 'Result chai hya dekhaucha',
         'listings' => Listing::all()
     ]);
 });

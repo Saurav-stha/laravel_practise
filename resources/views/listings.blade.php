@@ -5,7 +5,7 @@
 <h3>Aray hai ta aba</h3>
 
 @if(count($listings) == 0)
-<p>No array here!</p>
+<p>array khali xa!</p>
 @endif
 
 @foreach ($listings as $listing)
