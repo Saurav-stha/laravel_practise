@@ -11,7 +11,7 @@
 @foreach ($listings as $listing)
 
     <p>{{ $listing['id'] }}</p>
-    <a href="/listings/{{$listing['id']}}"><p>{{ $listing['nam']; }}</p></a>
+    <a href="/listings/{{$listing['id']}}"><p>{{ $listing['title']; }}</p></a>
     <p>{{ $listing['description']; }}</p>
 
 @endforeach
