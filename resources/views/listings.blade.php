@@ -1,3 +1,6 @@
+@extends('layout')
+
+@section('content')
 <h1>Lets go!</h1>
 
 <h2>{{$nameOfRes}}</h2>
@@ -15,3 +18,5 @@
     <p>{{ $listing['description']; }}</p>
 
 @endforeach
+
+@endsection
