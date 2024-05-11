@@ -1,22 +1,30 @@
 @extends('layout')
 
 @section('content')
-<h1>Lets go!</h1>
 
-<h2>{{$nameOfRes}}</h2>
+@include('partials._hero')
+@include('partials._search')
+{{-- <h2>{{$nameOfRes}}</h2> --}}
+<div
+    class="lg:grid lg:grid-cols-2 gap-4 space-y-4 md:space-y-0 mx-4"
+>
 
-<h3>Aray hai ta aba</h3>
+    @unless(count($listings) == 0)
 
-@if(count($listings) == 0)
-<p>array khali xa!</p>
-@endif
+    @foreach ($listings as $listing)
+    <x-listing-card :listing="$listing" /> {{-- no space should exist b4 or after "=" --}}
+    @endforeach
 
-@foreach ($listings as $listing)
+    @else
+    <p>testo kei listing xaina!</p>
 
-    <p>{{ $listing['id'] }}</p>
-    <a href="/listings/{{$listing['id']}}"><p>{{ $listing['title']; }}</p></a>
-    <p>{{ $listing['description']; }}</p>
-
-@endforeach
+    @endif
 
 @endsection
+{{-- 
+
+<h3>Aray hai ta aba</h3> 
+<p>{{ $listing['id'] }}</p>
+    <a href="/listings/{{$listing['id']}}"><p>{{ $listing['title']; }}</p></a>
+    <p>{{ $listing['description']; }}</p> --}}
+
