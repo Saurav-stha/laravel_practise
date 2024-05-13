@@ -49,7 +49,8 @@
         <main>
             {{-- Hya chai sabai ma huni layout --}}
         
-            @yield('content')
+            {{$slot}}
+            {{-- @yield('content') --}}
         </main>
 
         <footer

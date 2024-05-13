@@ -14,24 +14,26 @@
 //     return $req->nam . ' ' .$req->surn;
 // });
 
+use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Models\Listing;
+use App\Http\Controllers\ListingController;
 
-Route::get('/', function () {
-    return view('listings', [
-        'nameOfRes' => 'Result chai hya dekhaucha',
-        'listings' => Listing::all()
-    ]);
-});
+//Common Resource Routes:
+//index Show all listings
+//show - Show single listing
+//create Show form to create new listing
+//store - Store new listing
+//edit - Show form to edit listing
+//update Update listing
+//destroy - Delete listing 
+//// These are just convention ////
 
-//find a specific item
-Route::get('/listings/{listing}',function(Listing $listing){
-    return view("listing",[
-        'listing' => $listing
-    ]);
-    
-});
+// Show all listings
+Route::get('/', [ListingController::class, 'index']);
+
+//find a specific item i.e show one listing
+Route::get('/listings/{listing}', [ListingController::class, 'show'] );
 // above fuction is same as ...
 // Route::get('/listings/{id}', function($id){
 //     $listing = Listing::find($id);
