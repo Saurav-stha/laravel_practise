@@ -9,9 +9,10 @@ class ListingController extends Controller
 {
     // Get and show all listings
     public function index(){
+        // dd(request('tag'));
         return view('listings.index', [
             'nameOfRes' => 'Result chai hya dekhaucha',
-            'listings' => Listing::all()
+            'listings' => Listing::latest()->filter(request(['tag','search']))->get() // [] for sending array
         ]);
     }
 

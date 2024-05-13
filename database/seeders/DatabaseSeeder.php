@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
 
         Listing::create([
             'title' => 'Laravel Senior Developer', 
-            'tags' => 'laravel, javascript',
+            'tags' => 'laravel,javascript',
             'company' => 'Acme Corp',
             'location' => 'Boston, MA',
             'email' => 'email1@email.com',
@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
 
         Listing::create([
             'title' => 'Full-Stack Engineer',
-            'tags' => 'laravel, backend ,api',
+            'tags' => 'laravel,backend ,api',
             'company' => 'Stark Industries',
             'location' => 'New York, NY',
             'email' => 'email2@email.com',
@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
 
         Listing::create([
             'title' => 'Backend Developer', 
-            'tags' => 'laravel, php, api',
+            'tags' => 'laravel,php,api',
             'company' => 'Skynet Systems',
             'location' => 'Newark, NJ',
             'email' => 'email4@email.com',
@@ -53,7 +53,7 @@ class DatabaseSeeder extends Seeder
           ]);
         Listing::create([
               'title' => 'Junior Developer', 
-              'tags' => 'laravel, php, javascript',
+              'tags' => 'laravel,php,javascript',
               'company' => 'Wonka Industries',
               'location' => 'Boston, MA',
               'email' => 'email4@email.com',
