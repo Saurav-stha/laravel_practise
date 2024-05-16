@@ -32,3 +32,5 @@ return new class extends Migration
         Schema::dropIfExists('listings');
     }
 };
+// $table->string('googleId')->nullable();
+

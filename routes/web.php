@@ -17,7 +17,9 @@
 use App\Models\Listing;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 use App\Http\Controllers\ListingController;
+use App\Http\Controllers\GoogleAuthController;
 
 //Common Resource Routes:
 //index Show all listings
@@ -47,7 +49,16 @@ Route::get('/listings/{listing}', [ListingController::class, 'show'] );
 // });
 
 
+// show/create form
+Route::get('/register',[UserController::class, 'create']);
 
+Route::get('/login',[UserController::class , 'login']);
 
+// store/create user in db
+Route::post('/users',[UserController::class, 'store']);
 
+Route::get('/auth/google',[GoogleAuthController::class, 'redirect'])->name('google-auth');
 
+Route::get('/auth/google/call-back',[GoogleAuthController::class, 'callbackGoogle']);
+
+Route::get('/logout',[UserController::class, 'logout']);
