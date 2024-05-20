@@ -34,6 +34,13 @@ use App\Http\Controllers\GoogleAuthController;
 // Show all listings
 Route::get('/', [ListingController::class, 'index']);
 
+// show listing form
+Route::get('/listings/create', [ListingController::class, 'create']);
+
+// store listing data
+Route::post('/listings',[ListingController::class, 'store']);
+
+
 //find a specific item i.e show one listing
 Route::get('/listings/{listing}', [ListingController::class, 'show'] );
 // above fuction is same as ...
@@ -47,6 +54,7 @@ Route::get('/listings/{listing}', [ListingController::class, 'show'] );
 //         abort('404');
 //     }
 // });
+
 
 
 // show/create form
