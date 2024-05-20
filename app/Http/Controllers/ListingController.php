@@ -43,7 +43,7 @@ class ListingController extends Controller
 
         Listing::create($newGig);
 
-        return redirect('/');
+        return redirect('/')->with('message','New Job Listing Added!!');
 
     }
 }
