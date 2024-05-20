@@ -13,7 +13,7 @@ class ListingController extends Controller
         // dd(request('tag'));
         return view('listings.index', [
             'nameOfRes' => 'Result chai hya dekhaucha',
-            'listings' => Listing::latest()->filter(request(['tag','search']))->get() // [] for sending array
+            'listings' => Listing::latest()->filter(request(['tag','search']))->paginate(4) // [] for sending array
         ]);
     }
 

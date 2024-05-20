@@ -15,6 +15,12 @@
     
         @endif
     </div>
+
+    {{-- css have to be applied if tailwind is not being used. Use cmd : php artisan vendor:publish then enter 5 --}}
+    <div class="mt-6 p-6"> 
+        {{$listings->links()}}    
+    </div>    
+
     
     {{-- <h3>Aray hai ta aba</h3> 
     <p>{{ $listing['id'] }}</p>
